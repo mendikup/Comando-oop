@@ -2,11 +2,11 @@ namespace Comando.models
 {
     public class Commando
     {
-        string Name;
-        string CodeName;
-        List<string> Tools;
+        public string Name;
+        public string CodeName;
+        public List<string> Tools;
 
-        private string Status;
+        public string Status;
 
         public Commando(string name, string codeName, string status)
         {
