@@ -2,9 +2,9 @@ namespace Comando.models
 {
     public class Commando
     {
-        public string Name;
-        public string CodeName;
-        public List<string> Tools;
+        private string Name;
+      public  string CodeName { get; set; }
+        public List<string> Tools = new List<string> { "Hammer", "chisel", "rope", "bag", "water", "bottle" };
 
         public string Status;
 
@@ -12,14 +12,13 @@ namespace Comando.models
         {
             Name = name;
             CodeName = codeName;
-            Tools = new List<string>();
             Status = status;
 
 
         }
 
 
-        void Walk()
+        public void Walk()
         {
             System.Console.WriteLine("the solder is walking");
             Status = "walk";
@@ -27,18 +26,43 @@ namespace Comando.models
         }
 
 
-        void Hide()
+        public void Hide()
         {
             System.Console.WriteLine("the soldier is hiding");
             Status = "hide";
 
         }
-        
 
-           void Attack()
+
+        public void Attack()
         {
             System.Console.WriteLine($"the soldier{CodeName} is attacking ");
-            
+
+
+        }
+
+        public void SayName(string coomanderRank)
+        {
+            if (coomanderRank == "GENERAL")
+            {
+                Console.WriteLine($"the neame of the soldier is {Name}");
+
+            }
+
+            else if (coomanderRank == "COLONEL")
+            {
+                Console.WriteLine($"the neame of the soldier is {CodeName}");
+
+            }
+
+            else
+            {
+                Console.WriteLine("teh information is classiified");
+
+            }
+
+
+
 
         }
     }
