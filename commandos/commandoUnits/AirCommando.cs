@@ -10,6 +10,14 @@ namespace Commandos.models
 
 
 
+        public override void Attack()
+        {
+            Console.WriteLine($"the AirCommando soldier {CodeName} is attacking ");
+
+
+        }
+
+
 
         public void Fly()
         {
