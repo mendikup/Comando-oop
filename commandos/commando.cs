@@ -1,9 +1,9 @@
-namespace Comando.models
+namespace Commandos.models
 {
     public class Commando
     {
-        private string Name;
-      public  string CodeName { get; set; }
+        protected string Name;
+        public  string CodeName { get; set; }
         public List<string> Tools = new List<string> { "Hammer", "chisel", "rope", "bag", "water", "bottle" };
 
         public string Status;
@@ -18,7 +18,7 @@ namespace Comando.models
         }
 
 
-        public void Walk()
+        public  void Walk()
         {
             System.Console.WriteLine("the solder is walking");
             Status = "walk";
@@ -26,7 +26,7 @@ namespace Comando.models
         }
 
 
-        public void Hide()
+        public  void Hide()
         {
             System.Console.WriteLine("the soldier is hiding");
             Status = "hide";
@@ -34,14 +34,14 @@ namespace Comando.models
         }
 
 
-        public void Attack()
+        public virtual void Attack()
         {
             System.Console.WriteLine($"the soldier{CodeName} is attacking ");
 
 
         }
 
-        public void SayName(string coomanderRank)
+        public  void SayName(string coomanderRank)
         {
             if (coomanderRank == "GENERAL")
             {

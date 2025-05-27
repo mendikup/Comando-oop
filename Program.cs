@@ -1,14 +1,29 @@
-﻿namespace Comando.models
+﻿using Commandos.models;
+
+namespace Comando.models
 {
     public class Program
     {
         public static void Main(string[] args)
         {
-            Commando commandoSoldier1 = new Commando("meni", "thekiller", "walk");
 
-            Console.WriteLine(commandoSoldier1.CodeName);
-            commandoSoldier1.CodeName = "the iron men";
-             Console.WriteLine(commandoSoldier1.CodeName);
+            AirCommando airCommando1 = new AirCommando("Air Commando soldier", "iron dom", "Attack");
+            SeaCommando seaCommando1 = new SeaCommando("Sea Commando soldier", "iron bee-", "hide");
+            Commando commando = new Commando("daniel fisher ", "the strongest", "hide");
+
+
+            Commando[] comandoSoldiers = new Commando[3];
+
+            comandoSoldiers[0] = airCommando1;
+            comandoSoldiers[1] = seaCommando1;
+            comandoSoldiers[2] = commando;
+
+            foreach (Commando soldier in comandoSoldiers)
+            {
+                soldier.Attack();
+            }
+
+
         }
     }
 }
