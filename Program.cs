@@ -6,6 +6,7 @@ namespace Comando.models
     {
         public static void Main(string[] args)
         {
+
             AirCommando airCommando1 = new AirCommando("Air Commando soldier", "iron dom", "Attack");
             SeaCommando seaCommando1 = new SeaCommando("Sea Commando soldier", "iron bee-", "hide");
             Commando commando = new Commando("daniel fisher ", "the strongest", "hide");
@@ -13,16 +14,16 @@ namespace Comando.models
 
             Commando[] comandoSoldiers = new Commando[3];
 
-            comandoSoldiers[0]=airCommando1;
-           comandoSoldiers[1]=seaCommando1;
-           comandoSoldiers[2]=commando;
+            comandoSoldiers[0] = airCommando1;
+            comandoSoldiers[1] = seaCommando1;
+            comandoSoldiers[2] = commando;
 
             foreach (Commando soldier in comandoSoldiers)
             {
                 soldier.Attack();
             }
-       
-  
+
+
         }
     }
 }
