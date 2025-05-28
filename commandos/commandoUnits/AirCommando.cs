@@ -4,7 +4,7 @@ namespace Commandos.models
 {
     public class AirCommando : Commando
     {
-        public AirCommando(string name, string codeName, string status) : base(name, codeName, status) { }
+        public AirCommando(string name, char codeName, string status) : base(name, codeName, status) { }
 
 
 

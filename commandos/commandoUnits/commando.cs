@@ -1,14 +1,14 @@
 namespace Commandos.models
 {
-    public class Commando
+    public abstract class Commando
     {
         protected string Name;
-        public  string CodeName { get; set; }
+        public  char CodeName { get; set; }
         public List<string> Tools = new List<string> { "Hammer", "chisel", "rope", "bag", "water", "bottle" };
 
         public string Status;
 
-        public Commando(string name, string codeName, string status)
+        public Commando(string name, char codeName, string status)
         {
             Name = name;
             CodeName = codeName;
@@ -18,7 +18,7 @@ namespace Commandos.models
         }
 
 
-        public  void Walk()
+        public   void Walk()
         {
             System.Console.WriteLine("the solder is walking");
             Status = "walk";
@@ -36,7 +36,7 @@ namespace Commandos.models
 
         public virtual void Attack()
         {
-            System.Console.WriteLine($"the soldier{CodeName} is attacking ");
+            System.Console.WriteLine($"the soldier {Name}. code name: {CodeName} is attacking ");
 
 
         }
