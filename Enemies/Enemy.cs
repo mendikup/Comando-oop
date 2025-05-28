@@ -1,26 +1,22 @@
 namespace Enemies.nodeles
 {
-    public class Enemy
+    public abstract class Enemy
     {
-        string Name;
-        int Live;
-        string Status;
+        public string Name { get; set; }
+        protected int Live = 100;
+        protected string Status = "Alive";
 
-        public Enemy(string neme, int live, string status)
+        public Enemy(string neme)
         {
             Name = neme;
 
-            Live = live;
-
-            Status = status;
 
         }
 
 
-        public void Scream()
-        {
-            Console.WriteLine("i am an Enemyyyyy!!!!!!")
-        }
+        public abstract void Scream();
+        
+      
 
     }
 }
